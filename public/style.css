@@ -5,6 +5,8 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --brand-primary: #6649b8;
+  --transition-speed: 600ms;
 }
 
 body {
@@ -23,7 +25,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: var(--brand-primary);
 }
 
 main {
@@ -36,6 +38,7 @@ main {
   height: 100vh;
   position: fixed;
   background-color: var(--bg-primary);
+  transition: width 200ms ease;
 }
 
 .navbar-nav {
@@ -61,6 +64,8 @@ main {
   align-items: center;
   height: 5rem;
   color: var(--text-primary);
+  transition: color var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease;
   text-decoration: none;
 }
 
@@ -76,6 +81,16 @@ main {
 
 .fa-primary {
   fill: var(--text-primary);
+  transition: fill var(--transition-speed) ease;
+}
+
+.nav-link:hover .fa-primary {
+  fill: var(--brand-primary);
+}
+
+.nav-link:hover {
+  color: var(--brand-primary);
+  background-color: var(--bg-secondary);
 }
 
 .navbar:hover {
