@@ -77,3 +77,11 @@ main {
 .fa-primary {
   fill: var(--text-primary);
 }
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
