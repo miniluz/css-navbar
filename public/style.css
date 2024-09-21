@@ -64,14 +64,34 @@ main {
   align-items: center;
   height: 5rem;
   color: var(--text-primary);
-  transition: color var(--transition-speed) ease;
   transition: background-color var(--transition-speed) ease;
   text-decoration: none;
+}
+
+.logo {
+  height: 5rem;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-left: 0rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  display: flex;
+  justify-content: center;
+}
+
+.logo .fa-primary {
+  fill: var(--text-secondary);
 }
 
 .link-text {
   display: none;
   margin-left: 1rem;
+  transition: color var(--transition-speed) ease;
 }
 
 .nav-link svg {
