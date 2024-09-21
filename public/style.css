@@ -4,6 +4,7 @@
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
+  --bg-primary-hover: #151522;
   --bg-secondary: #141418;
   --brand-primary: #6649b8;
   --transition-speed: 600ms;
@@ -110,7 +111,7 @@ main {
 
 .nav-link:hover {
   color: var(--brand-primary);
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary-hover);
 }
 
 .navbar:hover {
@@ -119,4 +120,13 @@ main {
 
 .navbar:hover .link-text {
   display: block;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: transform var(--transition-speed) ease;
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(180deg);
 }
