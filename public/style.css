@@ -30,13 +30,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  margin-left: 5rem;
   padding: 1rem;
 }
 
 .navbar {
-  width: 5rem;
-  height: 100vh;
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 200ms ease;
@@ -50,14 +47,6 @@ main {
   flex-direction: column;
   align-items: center;
   height: 100%;
-}
-
-.nav-item {
-  width: 100%;
-}
-
-.nav-item:last-child {
-  margin-top: auto;
 }
 
 .nav-link {
@@ -114,14 +103,6 @@ main {
   background-color: var(--bg-primary-hover);
 }
 
-.navbar:hover {
-  width: 16rem;
-}
-
-.navbar:hover .link-text {
-  display: block;
-}
-
 .logo svg {
   transform: rotate(0deg);
   transition: transform var(--transition-speed) ease;
@@ -129,4 +110,32 @@ main {
 
 .navbar:hover .logo svg {
   transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    margin-left: 5rem;
+  }
+
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: block;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item:last-child {
+    margin-top: auto;
+  }
 }
